@@ -26,3 +26,8 @@ This file tracks meaningful actions taken in this repository for clarity and tra
 - Files: `WORKLOG.md`
 - Outcome: Work log established; ready for subsequent entries.
 
+### 2025-11-06 — Hide empty state during loading
+- Context: Empty state should not appear while data is loading.
+- Actions: Render `TodoList` only when either loading is false or there are todos.
+- Files: `app/page.tsx`
+- Outcome: While `loading === true` and `todos.length === 0`, only the loading indicator is shown; after loading, the empty state appears if there are no todos.

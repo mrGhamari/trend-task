@@ -39,12 +39,14 @@ export default function Home() {
           </div>
         )}
 
-        <TodoList
-          todos={todos}
-          pendingIds={pendingIds}
-          onToggle={toggleComplete}
-          onDelete={removeTodo}
-        />
+        {(todos.length > 0 || !loading) && (
+          <TodoList
+            todos={todos}
+            pendingIds={pendingIds}
+            onToggle={toggleComplete}
+            onDelete={removeTodo}
+          />
+        )}
       </main>
     </div>
   );
